@@ -1,21 +1,34 @@
-=== Force First and Last Name as Display Name  ===
+=== Force First and Last Name as Display Name ===
 Contributors: strangerstudios
-Tags: display_name, first name, last name, firstname, lastname, first, last, force
+Tags: display name, force, firstname, first name, lastname, last name, display_name
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: .1
+Tested up to: 3.6
+Stable tag: .2
 
-Forces all users' display name to be "First Last".
+Force the "display_name" of all users to be the user's first and last name. If those fields are empty, display name falls back to their username.
 
 == Description ==
 
-The display name option will be disabled in the edit user/profile page. All users' display names will be set to [First Name][Space][Last Name]. If only one name is available, that is used. If no name is available, the user_login is used.
+The display name dropdown is hidden from users. Instead, it is always set to their first and last name, or username if those fields are empty.
+
+Display names are updated at registration or when a user profile is updated. To update existing users, visit Settings --> Force First Last and click on the link to run an initial update on your users.
 
 == Installation ==
 
-1. Upload the `force-first-last` directory to the `/wp-content/plugins/` directory of your site.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
+= Download, Install and Activate! =
+1. Upload `force-first-last` to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Visit Settings --> Force First Last to run an initial update of all of your users.
 
-== Changelog ==
+== Frequently Asked Questions ==
+
+None yet.
+
+== Changelog == 
+
+= .2 =
+* Added settings page to update existing users.
+* Hiding display name dropdown on profile page.
+
 = .1 =
-* First version.
+* Initial version.
