@@ -2,8 +2,8 @@
 Contributors: strangerstudios
 Tags: display name, force, firstname, first name, lastname, last name, display_name
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: .2
+Tested up to: 4.9.1
+Stable tag: 1.0
 
 Force the "display_name" of all users to be the user's first and last name. If those fields are empty, display name falls back to their username.
 
@@ -25,6 +25,10 @@ Display names are updated at registration or when a user profile is updated. To 
 None yet.
 
 == Changelog == 
+
+= 1.0 =
+* Change priority of the user_register hook to 20 so it will run after plugins setting first/last name etc.
+* Let's call this official at 1.0
 
 = .2 =
 * Added settings page to update existing users.
