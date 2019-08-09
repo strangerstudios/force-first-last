@@ -2,7 +2,7 @@
 Contributors: strangerstudios
 Tags: display name, force, firstname, first name, lastname, last name, display_name
 Requires at least: 3.0
-Tested up to: 4.9.1
+Tested up to: 5.2.2
 Stable tag: 1.0
 
 Force the "display_name" of all users to be the user's first and last name. If those fields are empty, display name falls back to their username.
