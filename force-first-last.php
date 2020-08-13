@@ -18,13 +18,18 @@ define( 'FFL_BASENAME', plugin_basename( __FILE__ ) );
  * Hide Display Name field on profile page.
  *
  */
-function ffl_show_user_profile( $user ) { ?>
-	<script>
-		jQuery(document).ready(function() {
-			jQuery('#display_name').parent().parent().hide();
-		});
-	</script>
-	<?php
+function ffl_show_user_profile( $user ) {
+	$hide_display_name = apply_filters( 'pmpro_ffl_hide_display_name_profile', true, $user );
+
+	if( $hide_display_name ){
+		?>
+		<script>
+			jQuery(document).ready(function() {
+				jQuery('#display_name').parent().parent().hide();
+			});
+		</script>
+		<?php
+	}
 }
 add_action( 'show_user_profile', 'ffl_show_user_profile' );
 add_action( 'edit_user_profile', 'ffl_show_user_profile' );
