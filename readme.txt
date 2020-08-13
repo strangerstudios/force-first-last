@@ -43,6 +43,7 @@ None yet.
 * ENHANCEMENT: Adding support for the Paid Memberships Pro frontend member profile edit screen.
 * ENHANCEMENT: Improving the settings page appearance.
 * ENHANCEMENT: Tested up to WordPress 5.5.
+* ENHANCEMENT: Added pmpro_ffl_hide_display_name_profile filter. Set to return false if you'd like the display name field to show up on the edit user page in the WP dashboard.
 
 = 1.0 =
 * Change priority of the user_register hook to 20 so it will run after plugins setting first/last name etc.
