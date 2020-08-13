@@ -1,30 +1,48 @@
 === Force First and Last Name as Display Name ===
-Contributors: strangerstudios
-Tags: display name, force, firstname, first name, lastname, last name, display_name
+Contributors: strangerstudios, kimannwall
+Tags: display name, user, force, first name, last name
 Requires at least: 3.0
-Tested up to: 5.2.2
-Stable tag: 1.0
+Tested up to: 5.5
+Stable tag: 1.1
 
-Force the "display_name" of all users to be the user's first and last name. If those fields are empty, display name falls back to their username.
+Force the user field "display_name" to be set as the user's first and last name.
 
 == Description ==
 
-The display name dropdown is hidden from users. Instead, it is always set to their first and last name, or username if those fields are empty.
+This plugin hides the "Display Name" field on the Edit Profile screen for all users. Instead of allowing users to set this field, the plugin will always set the User field display_name to their first and last name. If these field are empty, display_name will be set to their username.
 
-Display names are updated at registration or when a user profile is updated. To update existing users, visit Settings --> Force First Last and click on the link to run an initial update on your users.
+Display names are set when the user registers as well as when a user's profile is updated via the WordPress admin.
+
+The plugin includes a batch process to update the display name for existing users. Navigate to Settings > Force First Last in the WordPress admin to run the update.
+
+= Paid Memberships Pro Compatibility =
+
+This plugin is now compatible with Paid Memberships Pro. The "Display Name" field is hidden from the frontend Member Profile Edit page. Display Name is automatically set when this form is saved. Display Name will also be updated at membership checkout if you are capturing the member's first and last name via a [Register Helper field](https://www.paidmembershipspro.com/add-ons/pmpro-register-helper-add-checkout-and-profile-fields/) or when using the [Add Name to Checkout Add On](https://www.paidmembershipspro.com/add-ons/add-first-last-name-to-checkout/).
 
 == Installation ==
 
 = Download, Install and Activate! =
+
 1. Upload `force-first-last` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Visit Settings --> Force First Last to run an initial update of all of your users.
+3. Visit Settings > Force First Last to run an initial update for all of your users.
 
 == Frequently Asked Questions ==
 
 None yet.
 
+== Screenshots ==
+
+1. Display Name field is removed from the User Profile in WordPress admin.
+2. Navigate to Settings > Force First Last in the WordPress admin to run a batch update on all users.
+3. Paid Memberships Pro's frontend Member Profile Edit page with Display Name field removed.
+
 == Changelog == 
+
+= 1.1 - 2020-08-13 =
+* ENHANCEMENT: Adding support for the Paid Memberships Pro frontend member profile edit screen.
+* ENHANCEMENT: Improving the settings page appearance.
+* ENHANCEMENT: Tested up to WordPress 5.5.
 
 = 1.0 =
 * Change priority of the user_register hook to 20 so it will run after plugins setting first/last name etc.
