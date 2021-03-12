@@ -1,0 +1,82 @@
+# Force First and Last Name as Display Name: WordPress plugin.
+# Copyright (C) 2011
+# This file is distributed under the same license as the PACKAGE package.
+# Stranger Studios <info@strangerstudios.com>, 2011.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: info@strangerstudios.com\n"
+"POT-Creation-Date: 2021-03-12 14:24-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: force-first-last.php:137
+msgid "Force First Last"
+msgstr ""
+
+#: force-first-last.php:184
+msgid "Stranger Studios"
+msgstr ""
+
+#: force-first-last.php:184
+msgid "Stranger Studios(c) - All Rights Reserved"
+msgstr ""
+
+#: force-first-last.php:186
+msgid "Plugins"
+msgstr ""
+
+#: force-first-last.php:186
+msgid "Stranger Studios WordPress Plugins"
+msgstr ""
+
+#: force-first-last.php:187
+msgid "Stranger Studios WordPress Themes"
+msgstr ""
+
+#: force-first-last.php:187
+msgid "Themes"
+msgstr ""
+
+#: force-first-last.php:188
+msgid "Blog"
+msgstr ""
+
+#: force-first-last.php:188
+msgid "Stranger Studios Blog"
+msgstr ""
+
+#: force-first-last.php:192
+msgid "Force First and Last Name"
+msgstr ""
+
+#: force-first-last.php:201
+#, php-format
+msgid "%s users updated"
+msgstr ""
+
+#: force-first-last.php:213
+msgid ""
+"The <em>Force First and Last Name as Display Name</em> plugin will only fix "
+"display names at registration or when a profile is updated. If you just "
+"activated this plugin, please click on the button below to update the "
+"display names of your existing users."
+msgstr ""
+
+#: force-first-last.php:215
+msgid "Update Existing Users"
+msgstr ""
+
+#: force-first-last.php:216
+msgid ""
+"<strong>WARNING:</strong> This process may take a long time for sites with "
+"many users or hosted on a slow server. <strong>Running this script may hang "
+"up or cause other issues with your site.</strong> Use at your own risk."
+msgstr ""
