@@ -76,8 +76,8 @@ function ffl_save_extra_profile_fields( $user_id ) {
 	}
 
 	if ( isset( $_POST['first_name'] ) && isset( $_POST['last_name'] ) ) {
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
+		$first_name = sanitize_text_field( trim( $_POST['first_name'] ) );
+		$last_name = sanitize_text_field( trim( $_POST['last_name'] ) );
 		$display_name = ffl_generate_display_name( $first_name, $last_name );
 	} else {
 		$info = get_userdata( $user_id );
@@ -181,11 +181,11 @@ function ffl_settings_page() { ?>
 	</style>
 	<div class="wrap">
 		<div class="stranger_studios_banner">
-			<a class="stranger_studios_logo" title="<?php esc_html_e( 'Stranger Studios', 'force-first-last' ); ?>" target="_blank" href="https://www.strangerstudios.com/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=homepage"><img src="<?php echo esc_url( plugins_url( 'images/Stranger-Studios.png', FFL_BASENAME ) ); ?>" border="0" alt="<?php esc_html_e( 'Stranger Studios(c) - All Rights Reserved', 'force-first-last' ); ?>"></a>
+			<a class="stranger_studios_logo" title="<?php esc_attr_e( 'Stranger Studios', 'force-first-last' ); ?>" target="_blank" href="https://www.strangerstudios.com/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=homepage"><img src="<?php echo esc_url( plugins_url( 'images/Stranger-Studios.png', FFL_BASENAME ) ); ?>" border="0" alt="<?php esc_attr_e( 'Stranger Studios(c) - All Rights Reserved', 'force-first-last' ); ?>"></a>
 			<div class="stranger_studios_meta">
-				<a href="https://www.strangerstudios.com/wordpress-plugins/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-plugins" target="_blank" title="<?php esc_html_e( 'Stranger Studios WordPress Plugins', 'force-first-last' ); ?>"><?php esc_html_e( 'Plugins', 'force-first-last' ); ?></a>
-				<a href="https://www.strangerstudios.com/wordpress-themes/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-themes" target="_blank" title="<?php esc_html_e( 'Stranger Studios WordPress Themes', 'force-first-last' ); ?>"><?php esc_html_e( 'Themes', 'force-first-last' ); ?></a>
-				<a href="https://www.strangerstudios.com/blog/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=blog" target="_blank" title="<?php esc_html_e( 'Stranger Studios Blog', 'force-first-last' ); ?>"><?php esc_html_e( 'Blog', 'force-first-last' ); ?></a>
+				<a href="https://www.strangerstudios.com/wordpress-plugins/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-plugins" target="_blank" title="<?php esc_attr_e( 'Stranger Studios WordPress Plugins', 'force-first-last' ); ?>"><?php esc_html_e( 'Plugins', 'force-first-last' ); ?></a>
+				<a href="https://www.strangerstudios.com/wordpress-themes/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-themes" target="_blank" title="<?php esc_attr_e( 'Stranger Studios WordPress Themes', 'force-first-last' ); ?>"><?php esc_html_e( 'Themes', 'force-first-last' ); ?></a>
+				<a href="https://www.strangerstudios.com/blog/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=blog" target="_blank" title="<?php esc_attr_e( 'Stranger Studios Blog', 'force-first-last' ); ?>"><?php esc_html_e( 'Blog', 'force-first-last' ); ?></a>
 			</div>
 		</div>
 		<div class="ffl_admin">
