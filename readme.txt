@@ -2,8 +2,8 @@
 Contributors: strangerstudios, kimannwall
 Tags: display name, user, force, first name, last name
 Requires at least: 3.0
-Tested up to: 5.5
-Stable tag: 1.1
+Tested up to: 5.7
+Stable tag: 1.2
 
 Force the user field "display_name" to be set as the user's first and last name.
 
@@ -29,7 +29,11 @@ This plugin is now compatible with Paid Memberships Pro. The "Display Name" fiel
 
 == Frequently Asked Questions ==
 
-None yet.
+= How do I update existing display names on my site? =
+Navigate to Settings > Force First Last to run a script that will update all existing users.
+
+= In my location, names are formatted as LAST FIRST. How do I switch the order? =
+You will need to use a custom filter to adjust the display order. See this code for an example: https://gist.github.com/kimcoleman/dc3227b9cebec79fa983261827df7485.
 
 == Screenshots ==
 
@@ -38,6 +42,10 @@ None yet.
 3. Paid Memberships Pro's frontend Member Profile Edit page with Display Name field removed.
 
 == Changelog == 
+
+= 1.2 - 2021-03-12
+* ENHANCEMENT: Added `ffl_display_name_order` filter to allow custom code to change display name to last first.
+* ENHANCEMENT: Tested up to WordPress 5.7.
 
 = 1.1 - 2020-08-13 =
 * ENHANCEMENT: Adding support for the Paid Memberships Pro frontend member profile edit screen.
