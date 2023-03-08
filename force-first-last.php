@@ -52,7 +52,7 @@ function ffl_generate_display_name( $first_name, $last_name ) {
  */
 function ffl_show_user_profile( $user ) {
 	$hide_display_name = apply_filters( 'pmpro_ffl_hide_display_name_profile', true, $user );
-
+	
 	if( $hide_display_name ){
 		?>
 		<script>
@@ -71,6 +71,11 @@ add_action( 'edit_user_profile', 'ffl_show_user_profile' );
  *
  */
 function ffl_save_extra_profile_fields( $user_id ) {
+
+	if ( empty( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'update-user_' . $user_id ) ) {
+		return;
+	}
+
 	if ( ! current_user_can( 'edit_user', $user_id ) ) {
 		return false;
 	}
@@ -86,13 +91,14 @@ function ffl_save_extra_profile_fields( $user_id ) {
 			$display_name = $info->user_login;
 		}
 	}
-		
+
+	//Note that we sanitize earlier on before setting it here
 	$_POST['display_name'] = $display_name;
 	
 	$args = array(
 		'ID' => $user_id,
 		'display_name' => $display_name
-	);   
+	); 
 	wp_update_user( $args );
 }
 add_action( 'personal_options_update', 'ffl_save_extra_profile_fields' );
