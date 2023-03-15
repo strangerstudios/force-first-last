@@ -1,9 +1,9 @@
 === Force First and Last Name as Display Name ===
 Contributors: strangerstudios, kimannwall
 Tags: display name, user, force, first name, last name
-Requires at least: 3.0
-Tested up to: 5.9
-Stable tag: 1.2
+Requires at least: 5.2
+Tested up to: 6.2
+Stable tag: 1.2.1
 
 Force the user field "display_name" to be set as the user's first and last name.
 
@@ -42,6 +42,9 @@ You will need to use a custom filter to adjust the display order. See this code 
 3. Paid Memberships Pro's frontend Member Profile Edit page with Display Name field removed.
 
 == Changelog == 
+
+= 1.2.1 - 2023-03-14
+* SECURITY: Added nonce to bulk "Update Existing Users" admin page to protect from CSRF vulnerability. (Thanks, @mikhail-net)
 
 = 1.2 - 2021-03-12
 * ENHANCEMENT: Added `ffl_display_name_order` filter to allow custom code to change display name to last first.
