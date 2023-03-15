@@ -191,6 +191,9 @@ function ffl_settings_page() { ?>
 		<div class="ffl_admin">
 			<h1 class="wp-heading-inline"><?php esc_html_e( 'Force First and Last Name', 'force-first-last') ;?></h1>
 			<?php if ( ! empty($_REQUEST['updateusers']) && current_user_can( 'manage_options' ) ) {
+				// Check the nonce.
+				check_admin_referer( 'ffl_update_users', 'ffl_update_users_nonce' );
+
 				global $wpdb;
 				$user_ids = $wpdb->get_col("SELECT ID FROM $wpdb->users");
 
@@ -212,7 +215,11 @@ function ffl_settings_page() { ?>
 				);
 				echo wp_kses( __( 'The <em>Force First and Last Name as Display Name</em> plugin will only fix display names at registration or when a profile is updated. If you just activated this plugin, please click on the button below to update the display names of your existing users.', 'force-first-last' ), $allowed_ffl_admin_text_strings_html ); ?>
 			</p>
-			<p><a href="?page=ffl_settings&updateusers=1" class="button button-hero button-primary"><?php esc_html_e( 'Update Existing Users', 'force-first-last' ); ?></a></p>
+			<form method="post" action="">
+			<input type="hidden" name="updateusers" value="1" />
+			<?php wp_nonce_field( 'ffl_update_users', 'ffl_update_users_nonce' ); ?>
+			<input type="submit" class="button button-hero button-primary" value="<?php esc_attr_e( 'Update Existing Users', 'force-first-last' ); ?>" />
+			</form>
 			<p><?php echo wp_kses( __( '<strong>WARNING:</strong> This process may take a long time for sites with many users or hosted on a slow server. <strong>Running this script may hang up or cause other issues with your site.</strong> Use at your own risk.', 'force-first-last' ), $allowed_ffl_admin_text_strings_html ); ?></p>
 		</div>
 	</div> <!-- end ffl_admin -->
