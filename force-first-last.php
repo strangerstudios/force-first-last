@@ -3,7 +3,7 @@
 Plugin Name: Force First and Last Name as Display Name
 Plugin URI: https://www.strangerstudios.com/wordpress-plugins/force-first-last/
 Description: Force the user field display_name to be set as the user's first and last name.
-Version: 1.2
+Version: 1.2.1
 Author: Stranger Studios
 Author URI: https://www.strangerstudios.com
 Text Domain: force-first-last
