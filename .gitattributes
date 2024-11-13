@@ -1,0 +1,7 @@
+# Items to ignore when downloading a zip
+
+# Files
+.gitattributes export-ignore
+
+# Folders
+.github export-ignore

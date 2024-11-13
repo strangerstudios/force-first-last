@@ -1,7 +1,4 @@
 # Force First and Last Name as Display Name: WordPress plugin.
-# Copyright (C) 2011
-# This file is distributed under the same license as the PACKAGE package.
-# Stranger Studios <info@strangerstudios.com>, 2011.
 #
 #, fuzzy
 msgid ""

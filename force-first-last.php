@@ -1,20 +1,12 @@
 <?php
 /*
 Plugin Name: Force First and Last Name as Display Name
-Plugin URI: https://www.strangerstudios.com/wordpress-plugins/force-first-last/
 Description: Force the user field display_name to be set as the user's first and last name.
-Version: 1.2.1
-Author: Stranger Studios
-Author URI: https://www.strangerstudios.com
+Version: 1.2.2
+Author: Contributors
 Text Domain: force-first-last
 Domain Path: /languages
 */
-
-/*
-	Copyright 2011	Stranger Studios	(email : jason@strangerstudios.com)
-	GPLv2 Full license details in license.txt
-*/
-
 define( 'FFL_BASENAME', plugin_basename( __FILE__ ) );
 
 /**
@@ -145,49 +137,11 @@ add_action( 'admin_menu', 'ffl_settings_menu_item', 20 );
 function ffl_settings_page() { ?>
 	<style>
 		/* Admin Header */
-		.stranger_studios_banner {
-			background-color: #2c3e50;
-			display: grid;
-			grid-column-gap: 20px;
-			grid-template-areas: "logo meta";
-			grid-template-columns: 360px auto;
-			margin-bottom: 20px;
-			padding: 0 20px;
-		}
-		.stranger_studios_banner .stranger_studios_logo img {
-			height: auto;
-			width: 100%;
-		}
-		.stranger_studios_banner .stranger_studios_meta {
-			align-self: center;
-			grid-area: meta;
-			font-size: 18px;
-			font-weight: 700;
-			line-height: 1.5;
-		}
-		.stranger_studios_banner .stranger_studios_meta a {
-			color: #FFF;
-			opacity: 75%;
-			padding: 5px 10px;
-			text-decoration: none;
-			text-transform: uppercase;
-		}
-		.stranger_studios_banner .stranger_studios_meta a:hover {
-			opacity: 100%;
-		}
 		.ffl_admin {
 			padding: 20px;
 		}
 	</style>
 	<div class="wrap">
-		<div class="stranger_studios_banner">
-			<a class="stranger_studios_logo" title="<?php esc_attr_e( 'Stranger Studios', 'force-first-last' ); ?>" target="_blank" href="https://www.strangerstudios.com/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=homepage"><img src="<?php echo esc_url( plugins_url( 'images/Stranger-Studios.png', FFL_BASENAME ) ); ?>" border="0" alt="<?php esc_attr_e( 'Stranger Studios(c) - All Rights Reserved', 'force-first-last' ); ?>"></a>
-			<div class="stranger_studios_meta">
-				<a href="https://www.strangerstudios.com/wordpress-plugins/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-plugins" target="_blank" title="<?php esc_attr_e( 'Stranger Studios WordPress Plugins', 'force-first-last' ); ?>"><?php esc_html_e( 'Plugins', 'force-first-last' ); ?></a>
-				<a href="https://www.strangerstudios.com/wordpress-themes/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=wordpress-themes" target="_blank" title="<?php esc_attr_e( 'Stranger Studios WordPress Themes', 'force-first-last' ); ?>"><?php esc_html_e( 'Themes', 'force-first-last' ); ?></a>
-				<a href="https://www.strangerstudios.com/blog/?utm_source=plugin&utm_medium=force-first-last&utm_campaign=blog" target="_blank" title="<?php esc_attr_e( 'Stranger Studios Blog', 'force-first-last' ); ?>"><?php esc_html_e( 'Blog', 'force-first-last' ); ?></a>
-			</div>
-		</div>
 		<div class="ffl_admin">
 			<h1 class="wp-heading-inline"><?php esc_html_e( 'Force First and Last Name', 'force-first-last') ;?></h1>
 			<?php if ( ! empty($_REQUEST['updateusers']) && current_user_can( 'manage_options' ) ) {
